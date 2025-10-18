@@ -1,0 +1,67 @@
+<?php
+namespace Wpcf7Ezdoc;
+if ( ! \defined( 'ABSPATH' ) ) {
+	exit; // Exit if accessed directly
+}
+
+require_once __DIR__ . '/renderer/api-key-setting-field-renderer.php';
+require_once __DIR__ . '/renderer/ezdoc-wpcf7-editor-panel-renderer.php';
+
+/**
+ * "admin_init" action
+ */
+function on_admin_init() {
+  \register_setting(
+    'general',
+    WPCF7_EZDOC_OPTION_API_KEY,
+    array(
+      'type' => 'string',
+      'label' => 'EZDoc APIキー',
+      'description' => 'EZDocとの連携に必要な認証キーです。EZDocの「外部システム連携」ページからご確認ください。',
+      'show_in_rest' => false
+    )
+  );
+
+  \add_settings_field(
+    WPCF7_EZDOC_OPTION_API_KEY,
+    'EZDoc APIキー',
+    'Wpcf7Ezdoc\renderer\render_api_key_setting_field',
+    'general'
+  );
+}
+\add_action('admin_init', 'Wpcf7Ezdoc\on_admin_init');
+
+/**
+ * "admin_enqueue_scripts" action
+ */
+function on_admin_enqueue_scripts() {
+  \wp_enqueue_style('wpcf7_ezdoc_admin_style', \plugins_url('css/styles.css', __FILE__));
+}
+\add_action('admin_enqueue_scripts', 'Wpcf7Ezdoc\on_admin_enqueue_scripts');
+
+/**
+ * "wpcf7_editor_panels" filter
+ */
+function on_wpcf7_editor_panels($panels) {
+  $panels['ezdoc'] = array(
+    'title' => 'EZDocの設定',
+		'callback' => 'Wpcf7Ezdoc\renderer\render_wpcf7_editor_panel',
+  );
+  return $panels;
+}
+\add_filter('wpcf7_editor_panels', 'Wpcf7Ezdoc\on_wpcf7_editor_panels');
+
+/**
+ * "wpcf7_save_contact_form" action
+ */
+function on_wpcf7_save_contact_form($form, $input, $context) {
+  $ezdoc_document_id = \wpcf7_superglobal_post( 'ezdoc-document-id', '' );
+  if ($context == 'save') {
+    $form->set_properties(
+      array(
+        WPCF7_EZDOC_FORM_PROPERTY_DOCUMENT_ID => $ezdoc_document_id
+      )
+    );
+  }
+}
+\add_action('wpcf7_save_contact_form', 'Wpcf7Ezdoc\on_wpcf7_save_contact_form', 10, 3);
