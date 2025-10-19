@@ -4,6 +4,13 @@
  * Plugin URI: https://ez-doc.net
  * Description: Contact Form 7 - EZDoc Integration
  * Version: 1.0.0
+ * Requires at least: 6.7
+ * Requires PHP: 8.1
+ * Author: Hikari Laboratory
+ * Author URI: https://lp.ez-doc.net/owner_info
+ * License: GPLv2
+ * License URI: https://www.gnu.org/licenses/gpl-2.0.html
+ * Requires Plugins: contact-form-7
  */
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly
