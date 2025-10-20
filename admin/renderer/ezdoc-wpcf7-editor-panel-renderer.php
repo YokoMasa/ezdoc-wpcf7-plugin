@@ -1,12 +1,12 @@
 <?php
-namespace Wpcf7Ezdoc\renderer;
+namespace EZDocWpcf7\renderer;
 
-use Wpcf7Ezdoc\EZDocClient;
-use Wpcf7Ezdoc\EZDocException;
-use function Wpcf7Ezdoc\to_form_tag_name;
+use EZDocWpcf7\EZDocClient;
+use EZDocWpcf7\EZDocException;
+use function EZDocWpcf7\to_form_tag_name;
 
 function render_wpcf7_editor_panel($form) {
-  $ezdoc_api_key = \get_option(\WPCF7_EZDOC_OPTION_API_KEY);
+  $ezdoc_api_key = \get_option(\EZDOC_WPCF7_OPTION_API_KEY);
   ?>
   <h2>EZDocの設定</h2>
   <p style="margin-bottom: 16px;">
@@ -30,8 +30,8 @@ function render_wpcf7_editor_panel($form) {
 }
 
 function _render_content($form, $ezdoc_documents, $ezdoc_viewer_attributes) {
-  $ezdoc_document_id = \array_key_exists(\WPCF7_EZDOC_FORM_PROPERTY_DOCUMENT_ID, $form->get_properties())
-    ? $form->get_properties()[\WPCF7_EZDOC_FORM_PROPERTY_DOCUMENT_ID]
+  $ezdoc_document_id = \array_key_exists(\EZDOC_WPCF7_FORM_PROPERTY_DOCUMENT_ID, $form->get_properties())
+    ? $form->get_properties()[\EZDOC_WPCF7_FORM_PROPERTY_DOCUMENT_ID]
     : '';
   $form_tags = $form->scan_form_tags();
   ?>
@@ -58,7 +58,7 @@ function _render_content($form, $ezdoc_documents, $ezdoc_viewer_attributes) {
   <p style="margin-top: 16px; margin-bottom: 0;">
     下記のフォームタグを設置することでその情報がEZDocに連携されます。必須に「●」がついているフォームタグは必ずフォームに含める必要があり、含めなかった場合EZDocに連携されなくなります。
   </p>
-  <table class="wpcf7-ezdoc-form-tag-table">
+  <table class="ezdoc-wpcf7-form-tag-table">
     <tr>      
       <th>必須</th>
       <th>タグ設置状況</th>

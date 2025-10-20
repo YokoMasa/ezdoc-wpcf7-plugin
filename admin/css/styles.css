@@ -1,15 +1,15 @@
-.wpcf7-ezdoc-form-tag-table {
+.ezdoc-wpcf7-form-tag-table {
   border-collapse: collapse;
   border: 1px solid black;
 }
 
-.wpcf7-ezdoc-form-tag-table th {
+.ezdoc-wpcf7-form-tag-table th {
   padding: 8px;
   background-color: #ddd;
   border: 1px solid black;
 }
 
-.wpcf7-ezdoc-form-tag-table td {
+.ezdoc-wpcf7-form-tag-table td {
   padding: 8px;
   border: 1px solid black;
 }

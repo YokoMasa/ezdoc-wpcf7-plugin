@@ -1,18 +1,18 @@
 <?php
-namespace Wpcf7Ezdoc;
+namespace EZDocWpcf7;
 
-use Wpcf7Ezdoc\EZDocClient;
-use Wpcf7Ezdoc\EZDocException;
-use function Wpcf7Ezdoc\to_attr_id;
+use EZDocWpcf7\EZDocClient;
+use EZDocWpcf7\EZDocException;
+use function EZDocWpcf7\to_attr_id;
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly
 }
 
 function on_wpcf7_submit($form, $submission_result) {
-  $ezdoc_api_key = \get_option(\WPCF7_EZDOC_OPTION_API_KEY);
-  $ezdoc_document_id = \array_key_exists(\WPCF7_EZDOC_FORM_PROPERTY_DOCUMENT_ID, $form->get_properties())
-    ? $form->get_properties()[\WPCF7_EZDOC_FORM_PROPERTY_DOCUMENT_ID]
+  $ezdoc_api_key = \get_option(\EZDOC_WPCF7_OPTION_API_KEY);
+  $ezdoc_document_id = \array_key_exists(\EZDOC_WPCF7_FORM_PROPERTY_DOCUMENT_ID, $form->get_properties())
+    ? $form->get_properties()[\EZDOC_WPCF7_FORM_PROPERTY_DOCUMENT_ID]
     : '';
   if (\is_null($ezdoc_document_id) or \is_null($ezdoc_api_key)) {
     return;
@@ -41,4 +41,4 @@ function on_wpcf7_submit($form, $submission_result) {
     \error_log($e->getMessage());
   }
 }
-\add_action('wpcf7_submit', 'Wpcf7Ezdoc\on_wpcf7_submit', 10, 2);
+\add_action('wpcf7_submit', 'EZDocWpcf7\on_wpcf7_submit', 10, 2);

@@ -1,5 +1,5 @@
 <?php
-namespace Wpcf7Ezdoc;
+namespace EZDocWpcf7;
 
 function to_form_tag_name(string $attr_id): string {
   $first_three_letters = \substr($attr_id, 0, 3);

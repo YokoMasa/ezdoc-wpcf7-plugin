@@ -1,5 +1,5 @@
 <?php
-namespace Wpcf7Ezdoc;
+namespace EZDocWpcf7;
 
 class EZDocException extends \Exception {
 

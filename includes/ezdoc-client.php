@@ -1,9 +1,9 @@
 <?php
-namespace Wpcf7Ezdoc;
+namespace EZDocWpcf7;
 
 require_once __DIR__ . '/ezdoc-exception.php';
 
-use Wpcf7Ezdoc\EZDocException;
+use EZDocWpcf7\EZDocException;
 
 class EZDocClient {
 
@@ -126,6 +126,9 @@ class EZDocClient {
 
 }
 
+/**
+ * Represents EZ Doc Document.
+ */
 class DocumentDTO {
 
   private string $id;
@@ -146,6 +149,9 @@ class DocumentDTO {
 
 }
 
+/**
+ * Represents EZ Doc Viewer Attribute Data Type
+ */
 enum DataType: string {
   case TEXT = 'TEXT';
   case LONG_TEXT = 'LONG_TEXT';
@@ -153,6 +159,9 @@ enum DataType: string {
   case SELECT = 'SELECT';
 }
 
+/**
+ * Represents EZ Doc Viewer Attribute
+ */
 class ViewerAttributeDTO {
 
   private string $id;
@@ -217,6 +226,9 @@ class ViewerAttributeDTO {
 
 }
 
+/**
+ * Represents EZ Doc Viewer Select Attribute Option
+ */
 class ViewerSelectAttributeOptionDTO {
 
   private string $name;

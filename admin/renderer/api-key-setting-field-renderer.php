@@ -1,10 +1,10 @@
 <?php
-namespace Wpcf7Ezdoc\renderer;
+namespace EZDocWpcf7\renderer;
 
 function render_api_key_setting_field() {
-  $setting = \get_option('wpcf7_ezdoc_api_key');
+  $setting = \get_option('ezdoc_wpcf7_api_key');
 	?>
-	  <input type="text" name="wpcf7_ezdoc_api_key" value="<?php echo isset( $setting ) ? esc_attr( $setting ) : ''; ?>">
+	  <input type="text" name="ezdoc_wpcf7_api_key" value="<?php echo isset( $setting ) ? esc_attr( $setting ) : ''; ?>">
     <br/>
     <p>
       EZDocとの連携に必要な認証キーです。EZDocの
