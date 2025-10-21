@@ -1,14 +1,14 @@
 <?php
 /**
- * Plugin Name: EZ Doc - Contact Form 7 Integration Plugin
+ * Plugin Name: EZ Doc - Contact Form 7 Integration
  * Plugin URI: https://lp.ez-doc.net
- * Description: EZ Doc - Contact Form 7 Integration Plugin
+ * Description: EZ Doc - Contact Form 7 Integration
  * Version: 1.0.0
  * Requires at least: 6.7
  * Requires PHP: 8.1
  * Author: Hikari Laboratory
  * Author URI: https://lp.ez-doc.net/owner_info
- * License: GPLv2
+ * License: GPLv2 or later
  * License URI: https://www.gnu.org/licenses/gpl-2.0.html
  * Requires Plugins: contact-form-7
  */
