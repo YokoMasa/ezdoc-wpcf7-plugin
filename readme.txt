@@ -1,8 +1,8 @@
 === EZ Doc - Contact Form 7 Integration ===
 Contributors: yokomasa
-Tags: tag1, tag2
+Tags: contact-form-7,form,資料請求,フォーム
 Requires at least: 6.7
-Tested up to: 6.8.3
+Tested up to: 6.8
 Stable tag: 1.0.0
 Requires PHP: 8.1
 License: GPLv2 or later

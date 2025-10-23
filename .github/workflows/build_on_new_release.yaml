@@ -1,0 +1,14 @@
+name: "Build on new release"
+run-name: "Perform build for release ${{ github.ref }}"
+on:
+  release:
+    types: [created]
+jobs:
+  main:
+    name: "Main"
+    runs-on: "ubuntu-24.04"
+    steps:
+      - name: "Zip content"
+        run: "zip ezdoc-wpcf7-$(echo ${{ github.ref }} | \"sed s/refs\/tags\///\").zip ezdoc-wpcf7.php LICENSE readme.txt public admin includes assets"
+      - name: "LS"
+        run: ls -al
