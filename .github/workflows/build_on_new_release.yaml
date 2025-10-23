@@ -8,8 +8,12 @@ jobs:
     name: "Main"
     runs-on: "ubuntu-24.04"
     steps:
-      - uses: actions/checkout@v5
+      - uses: "actions/checkout@v5"
+      - name: "Determine version"
+        run: |
+          echo ${{ github.ref }} | sed -e "s/refs\/tags\///" > __VERSION
+          echo ezdoc-wpcf7-$(cat __VERSION).zip > __FILE_NAME
       - name: "Zip content"
-        run: "zip ezdoc-wpcf7-$(echo ${{ github.ref }} | sed -e \"s/refs\\/tags\\///\").zip ezdoc-wpcf7.php LICENSE readme.txt public admin includes assets"
+        run: "zip $(cat __FILE_NAME) ezdoc-wpcf7.php LICENSE readme.txt public admin includes assets"
       - name: "LS"
         run: ls -al
