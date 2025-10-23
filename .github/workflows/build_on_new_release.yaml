@@ -8,6 +8,7 @@ jobs:
     name: "Main"
     runs-on: "ubuntu-24.04"
     steps:
+      - uses: actions/checkout@v5
       - name: "Zip content"
         run: "zip ezdoc-wpcf7-$(echo ${{ github.ref }} | sed -e \"s/refs\\/tags\\///\").zip ezdoc-wpcf7.php LICENSE readme.txt public admin includes assets"
       - name: "LS"
