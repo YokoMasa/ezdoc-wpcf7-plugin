@@ -16,8 +16,9 @@ jobs:
           echo ${{ github.ref }} | sed -e "s/refs\/tags\///" > __VERSION
           echo ezdoc-wpcf7.zip > __FILE_NAME
       - name: "Zip content"
-        run: "zip -R $(cat __FILE_NAME) ezdoc-wpcf7.php LICENSE readme.txt \"public/*\" \"admin/*\" \"includes/*\ \"assets/*\""
+        run: |
+          zip -R $(cat __FILE_NAME) ezdoc-wpcf7.php LICENSE readme.txt "public/*" "admin/*" "includes/*" "assets/*"
       - name: "Upload zip"
         run: "gh release upload $(cat __VERSION) $(cat __FILE_NAME)"
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}"
