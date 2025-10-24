@@ -18,7 +18,13 @@ jobs:
       - name: "Zip content"
         run: |
           zip -R $(cat __FILE_NAME) ezdoc-wpcf7.php LICENSE readme.txt "public/*" "admin/*" "includes/*" "assets/*"
+      - name: "LS
+        run: |
+          ls -al
+          cat __VERSION
+          cat __FILE_NAME
       - name: "Upload zip"
-        run: "gh release upload $(cat __VERSION) $(cat __FILE_NAME)"
+        run: |
+          gh release upload $(cat __VERSION) $(cat __FILE_NAME)
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}"
