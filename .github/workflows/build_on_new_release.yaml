@@ -18,7 +18,7 @@ jobs:
       - name: "Zip content"
         run: |
           zip -R $(cat __FILE_NAME) ezdoc-wpcf7.php LICENSE readme.txt "public/*" "admin/*" "includes/*" "assets/*"
-      - name: "LS
+      - name: "LS"
         run: |
           ls -al
           cat __VERSION
