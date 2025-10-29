@@ -51,10 +51,10 @@ For detailed instructions of how to use this plugin, please refer to [the EZ Doc
 
 == Screenshots ==
 
-1. 管理画面のイメージ
+1. Screenshot of the Admin page.
 
 == Changelog ==
 
 = 1.0.0 =
-* プラグインをリリースしました。
+* Initial release.
 
