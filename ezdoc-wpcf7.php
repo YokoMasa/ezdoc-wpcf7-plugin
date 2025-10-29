@@ -1,8 +1,8 @@
 <?php
 /**
- * Plugin Name: EZ Doc - Contact Form 7 Integration
+ * Plugin Name: EZ Doc Integration for Contact Form 7
  * Plugin URI: https://lp.ez-doc.net
- * Description: EZ Doc - Contact Form 7 Integration
+ * Description: This plugin enables you to integrate forms created with Contact Form 7 with EZ Doc. Example use cases: whitepaper marketing, lead generation
  * Version: 1.0.0
  * Requires at least: 6.7
  * Requires PHP: 8.1

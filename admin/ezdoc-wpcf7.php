@@ -18,7 +18,8 @@ function on_admin_init() {
       'type' => 'string',
       'label' => 'EZDoc APIキー',
       'description' => 'EZDocとの連携に必要な認証キーです。EZDocの「外部システム連携」ページからご確認ください。',
-      'show_in_rest' => false
+      'show_in_rest' => false,
+      'sanitize_callback' => 'sanitize_text_field'
     )
   );
 

@@ -1,6 +1,6 @@
-=== EZ Doc - Contact Form 7 Integration ===
+=== EZ Doc Integration for Contact Form 7 ===
 Contributors: yokomasa
-Tags: contact-form-7,form,資料請求,フォーム
+Tags: contact-form-7,form,whitepaper,marketing
 Requires at least: 6.7
 Tested up to: 6.8
 Stable tag: 1.0.0
@@ -8,29 +8,46 @@ Requires PHP: 8.1
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-Contact Form 7と連携し、Wordpressでホワイトペーパーや製品資料等の資料請求フォームを簡単に実現するためのプラグインです。
+This plugin enables you to integrate forms created with Contact Form 7 with EZ Doc. Example use cases: whitepaper marketing, lead generation
 
 == Description ==
 
-Contact Form 7と連携し、Wordpressでホワイトペーパーや製品資料等の資料請求フォームを簡単に実現するためのプラグインです。利用にはEZ Docのアカウントが必要です。
+\* This plugin, and the accompanying service (EZ Doc) is currently available only in Japanese.
 
-このプラグインを利用すると、サイト訪問者がフォームに回答した時に、その情報がEZ Docに保存されサイト訪問者にはメールで資料が送付されます。
+This plugin enables you to integrate forms created with Contact Form 7 with EZ Doc. You can easily implement auto-download form that can be used to generate leads from your website. 
 
-EZ Doc上では下記のようなことが可能です。
+In order to use this plugin, you need an EZ Doc account.
 
-* サイト訪問者の資料閲覧状況の確認
-* サイト訪問者の閲覧状況に応じたフィルタリング・並べ替え
-* サイト訪問者の資料閲覧時にSlackやメールでの通知
-* サイト訪問者の情報のHubSpotやSalesforceへの連携
-* サイト訪問者との商談日程の自動調整
+= What is EZ Doc? =
+EZ Doc is a Saas that enables you to get insights of how your PDF documents are viewed.
 
-EZ Doc自体の機能についての詳細は[EZ Docのウェブサイト](https://lp.ez-doc.net/)をご覧ください。
+Once you upload your PDF to EZ Doc, it creates a custom PDF viewer url that can be shared to desired viewers.
+When viewers view the PDF through the url, EZ Doc records various metrics about how the PDF is viewed.
 
-具体的な利用方法についてはEZ Docのヘルプ[「[Wordpress] Contact Form 7を使って資料請求フォームを設置する」](https://knowledge.ez-doc.net/help/20251020195241/)をご覧ください。
+Based on that metrics, you can, for example, 
+
+* visualize how lond each pages in PDF are viewed
+* filter and order viewers
+* notify yourself when the PDF is viewed by someone
+* automatically create records in Salesforce, HubSpot
+
+Full features are described in [EZ Doc website](https://lp.ez-doc.net/).
+
+For detailed instructions of how to use this plugin, please refer to [the EZ Doc help page](https://knowledge.ez-doc.net/help/20251020195241/).
+
+= What data is sent to EZ Doc? =
+
+Once you install this plugin and configure Contact Form 7 forms to integrate with EZ Doc, submitted form data will be sent to EZ Doc.
+
+You can configure what data will be sent to EZ Doc. Please refer to [the EZ Doc help page](https://knowledge.ez-doc.net/help/20251020195241/) help page for detailed instructions.
+
+[EZ Doc privacy policy (Japanese only)](https://ez-doc.net/privacy-policy)
+
+[EZ Doc terms of service (Japanese only)](https://ez-doc.net/terms-of-service)
 
 == Installation ==
 
-具体的な利用方法についてはEZ Docのヘルプ[「[Wordpress] Contact Form 7を使って資料請求フォームを設置する」](https://knowledge.ez-doc.net/help/20251020195241/)をご覧ください。
+For detailed instructions of how to use this plugin, please refer to [the EZ Doc help page](https://knowledge.ez-doc.net/help/20251020195241/).
 
 == Screenshots ==
 

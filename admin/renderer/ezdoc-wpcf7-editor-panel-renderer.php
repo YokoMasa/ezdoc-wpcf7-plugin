@@ -47,9 +47,9 @@ function _render_content($form, $ezdoc_documents, $ezdoc_viewer_attributes) {
       </option>
       <?php foreach($ezdoc_documents as $doc): ?>
         <option
-          value="<?php echo $doc->get_id() ?>"
+          value="<?php echo esc_attr($doc->get_id()) ?>"
           <?php echo $ezdoc_document_id == $doc->get_id() ? 'selected' : '' ?>>
-          <?php echo $doc->get_name() ?>
+          <?php echo esc_html($doc->get_name()) ?>
         </option>
       <?php endforeach ?>
     </select>
@@ -169,7 +169,7 @@ function _render_viewer_custom_attribute_row($attr, $has_form_tag_text) {?>
   <td></td>
   <td><?php echo $has_form_tag_text ?></td>
   <td>
-    &lt;label&gt;<?php echo $attr->get_name() ?>
+    &lt;label&gt;<?php echo esc_html($attr->get_name()) ?>
   <?php
   $form_tag_id = to_form_tag_name($attr->get_id());
   $form_tag = '[';
@@ -200,7 +200,7 @@ function _render_viewer_custom_attribute_row($attr, $has_form_tag_text) {?>
 function _render_no_api_key_content() {?>
   <div style="background-color: #fff085; padding: 8px; border-radius: 4px;">
     EZ DocのAPIキーが設定されていません。
-    <a href="<?php echo admin_url('options-general.php') ?>">「設定 -> 一般 -> EZDoc APIキー」</a>
+    <a href="<?php echo esc_url(admin_url('options-general.php')) ?>">「設定 -> 一般 -> EZDoc APIキー」</a>
     で設定を行ってください。
   </div>
 <?php
@@ -208,7 +208,7 @@ function _render_no_api_key_content() {?>
 
 function _render_api_error_content(string $message) {?>
   <div style="background-color: #ffc9c9; padding: 8px; border-radius: 4px; color: #c10007;">
-    <?php echo $message ?>
+    <?php echo esc_html($message) ?>
   </div>
 <?php
 }

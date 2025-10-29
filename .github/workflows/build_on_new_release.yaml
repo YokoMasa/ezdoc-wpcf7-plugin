@@ -17,7 +17,7 @@ jobs:
           echo ezdoc-wpcf7.zip > __FILE_NAME
       - name: "Zip content"
         run: |
-          zip -r $(cat __FILE_NAME) ezdoc-wpcf7.php LICENSE readme.txt public admin includes assets
+          zip -r $(cat __FILE_NAME) ezdoc-wpcf7.php LICENSE readme.txt public admin includes
       - name: "Upload zip"
         run: |
           gh release upload $(cat __VERSION) $(cat __FILE_NAME)
