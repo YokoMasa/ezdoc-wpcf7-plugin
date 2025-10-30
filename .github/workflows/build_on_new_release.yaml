@@ -10,14 +10,23 @@ jobs:
     permissions:
       contents: write
     steps:
+      - name: "Install Necessary Packages"
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y gettext
       - uses: "actions/checkout@v5"
       - name: "Determine version"
         run: |
           echo ${{ github.ref }} | sed -e "s/refs\/tags\///" > __VERSION
-          echo ezdoc-wpcf7.zip > __FILE_NAME
+          echo ez-doc-integration-for-contact-form-7.zip > __FILE_NAME
+      - name: "Compile PO Files"
+        working-directory: ./languages
+        run: |
+          for file in `find . -name "*.po"` ; do msgfmt -o ${file/.po/.mo} $file ; done
+          rm *.po *.pot
       - name: "Zip content"
         run: |
-          zip -r $(cat __FILE_NAME) ezdoc-wpcf7.php LICENSE readme.txt public admin includes
+          zip -r $(cat __FILE_NAME) ez-doc-integration-for-contact-form-7.php LICENSE readme.txt public admin includes languages
       - name: "Upload zip"
         run: |
           gh release upload $(cat __VERSION) $(cat __FILE_NAME)
