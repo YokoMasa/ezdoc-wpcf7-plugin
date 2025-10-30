@@ -1,0 +1,120 @@
+# Blank WordPress Pot
+# Copyright 2014 ...
+# This file is distributed under the GNU General Public License v3 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: ez-doc-integration-for-contact-form-7\n"
+"Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
+"POT-Creation-Date: 2025-10-30 16:27+0900\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: Masato Yokota <masato.yokota@ez-doc.net>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Textdomain-Support: yesX-Generator: Poedit 1.6.4\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: "
+"__;_e;esc_html_e;esc_html_x:1,2c;esc_html__;esc_attr_e;esc_attr_x:1,2c;esc_attr__;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;_x:1,2c;_n:1,2;_n_noop:1,2;__ngettext:1,2;__ngettext_noop:1,2;_c,_nc:4c,1,2\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-Bookmarks: \n"
+"X-Generator: Poedit 3.8\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: admin/ezdoc-wpcf7.php:19
+msgid "EZ Doc API key"
+msgstr ""
+
+#: admin/ezdoc-wpcf7.php:48
+msgid "EZ Doc settings"
+msgstr ""
+
+#: admin/renderer/ezdoc-wpcf7-editor-panel-renderer.php:13
+msgid "EZ Doc Settings"
+msgstr ""
+
+#: admin/renderer/ezdoc-wpcf7-editor-panel-renderer.php:17
+msgid ""
+"In this page, you can choose which EZ Doc document to be automatically sent "
+"to the form responder."
+msgstr ""
+
+#: admin/renderer/ezdoc-wpcf7-editor-panel-renderer.php:46
+msgid "EZ Doc document to be sent"
+msgstr ""
+
+#: admin/renderer/ezdoc-wpcf7-editor-panel-renderer.php:54
+msgid "None selected"
+msgstr ""
+
+#: admin/renderer/ezdoc-wpcf7-editor-panel-renderer.php:71
+msgid ""
+"By including form-tags below into the form template, the data will be sent "
+"to EZ Doc. You need to include all the required form-tags into the form "
+"template. Otherwise, form data will not be sent to EZ Doc."
+msgstr ""
+
+#: admin/renderer/ezdoc-wpcf7-editor-panel-renderer.php:77
+msgid "Required"
+msgstr ""
+
+#: admin/renderer/ezdoc-wpcf7-editor-panel-renderer.php:81
+msgid "Is tag included in the form template?"
+msgstr ""
+
+#: admin/renderer/ezdoc-wpcf7-editor-panel-renderer.php:85
+msgid "Form-tag example"
+msgstr ""
+
+#: admin/renderer/ezdoc-wpcf7-editor-panel-renderer.php:108
+msgid "Included"
+msgstr ""
+
+#: admin/renderer/ezdoc-wpcf7-editor-panel-renderer.php:109
+msgid "Not Included"
+msgstr ""
+
+#: admin/renderer/ezdoc-wpcf7-editor-panel-renderer.php:115
+msgid "First Name"
+msgstr ""
+
+#: admin/renderer/ezdoc-wpcf7-editor-panel-renderer.php:124
+msgid "First Name Kana"
+msgstr ""
+
+#: admin/renderer/ezdoc-wpcf7-editor-panel-renderer.php:133
+msgid "Last Name"
+msgstr ""
+
+#: admin/renderer/ezdoc-wpcf7-editor-panel-renderer.php:142
+msgid "Last Name Kana"
+msgstr ""
+
+#: admin/renderer/ezdoc-wpcf7-editor-panel-renderer.php:151
+msgid "Email"
+msgstr ""
+
+#: admin/renderer/ezdoc-wpcf7-editor-panel-renderer.php:160
+msgid "Phone Number"
+msgstr ""
+
+#: admin/renderer/ezdoc-wpcf7-editor-panel-renderer.php:169
+msgid "Organization"
+msgstr ""
+
+#: admin/renderer/ezdoc-wpcf7-editor-panel-renderer.php:178
+msgid "Organization Title"
+msgstr ""
+
+#: admin/renderer/ezdoc-wpcf7-editor-panel-renderer.php:224
+msgid "EZ Doc API key is not configured."
+msgstr ""
+
+#: admin/renderer/ezdoc-wpcf7-editor-panel-renderer.php:227
+msgid "Please configure API key from (Settings -> General -> EZ Doc API key)"
+msgstr ""
+
+msgid "API key necessary for integrating with EZ Doc."
+msgstr ""
