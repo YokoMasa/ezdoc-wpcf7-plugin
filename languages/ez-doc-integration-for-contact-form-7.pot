@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ez-doc-integration-for-contact-form-7\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2025-10-30 19:50+0900\n"
+"POT-Creation-Date: 2025-10-30 20:13+0900\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: Masato Yokota <masato.yokota@ez-doc.net>\n"
@@ -37,95 +37,125 @@ msgstr ""
 msgid "EZ Doc settings"
 msgstr ""
 
-#: admin/renderer/api-key-setting-field-renderer.php:11
+#: admin/renderer/api-key-setting-field-renderer.php:10
 msgid "API key necessary for EZ Doc integration."
 msgstr ""
 
-#: admin/renderer/api-key-setting-field-renderer.php:14
+#: admin/renderer/api-key-setting-field-renderer.php:12
 msgid "Please get the key in \"Integrate With External System\" page."
 msgstr ""
 
-#: admin/renderer/ezdoc-wpcf7-editor-panel-renderer.php:13
+#: admin/renderer/ezdoc-wpcf7-editor-panel-renderer.php:12
 msgid "EZ Doc Settings"
 msgstr ""
 
-#: admin/renderer/ezdoc-wpcf7-editor-panel-renderer.php:17
+#: admin/renderer/ezdoc-wpcf7-editor-panel-renderer.php:15
 msgid ""
 "In this page, you can choose which EZ Doc document to be automatically sent "
 "to the form responder."
 msgstr ""
 
-#: admin/renderer/ezdoc-wpcf7-editor-panel-renderer.php:46
+#: admin/renderer/ezdoc-wpcf7-editor-panel-renderer.php:43
 msgid "EZ Doc document to be sent"
 msgstr ""
 
-#: admin/renderer/ezdoc-wpcf7-editor-panel-renderer.php:54
+#: admin/renderer/ezdoc-wpcf7-editor-panel-renderer.php:50
 msgid "None selected"
 msgstr ""
 
-#: admin/renderer/ezdoc-wpcf7-editor-panel-renderer.php:71
+#: admin/renderer/ezdoc-wpcf7-editor-panel-renderer.php:63
 msgid ""
 "By including form-tags below into the form template, the data will be sent "
 "to EZ Doc. You need to include all the required form-tags into the form "
 "template. Otherwise, form data will not be sent to EZ Doc."
 msgstr ""
 
-#: admin/renderer/ezdoc-wpcf7-editor-panel-renderer.php:77
+#: admin/renderer/ezdoc-wpcf7-editor-panel-renderer.php:68
 msgid "Required"
 msgstr ""
 
-#: admin/renderer/ezdoc-wpcf7-editor-panel-renderer.php:81
+#: admin/renderer/ezdoc-wpcf7-editor-panel-renderer.php:71
 msgid "Is tag included in the form template?"
 msgstr ""
 
-#: admin/renderer/ezdoc-wpcf7-editor-panel-renderer.php:85
+#: admin/renderer/ezdoc-wpcf7-editor-panel-renderer.php:74
 msgid "Form-tag example"
 msgstr ""
 
-#: admin/renderer/ezdoc-wpcf7-editor-panel-renderer.php:108
+#: admin/renderer/ezdoc-wpcf7-editor-panel-renderer.php:97
 msgid "Included"
 msgstr ""
 
-#: admin/renderer/ezdoc-wpcf7-editor-panel-renderer.php:109
+#: admin/renderer/ezdoc-wpcf7-editor-panel-renderer.php:98
 msgid "Not Included"
 msgstr ""
 
-#: admin/renderer/ezdoc-wpcf7-editor-panel-renderer.php:115
+#: admin/renderer/ezdoc-wpcf7-editor-panel-renderer.php:104
 msgid "First Name"
 msgstr ""
 
-#: admin/renderer/ezdoc-wpcf7-editor-panel-renderer.php:124
+#: admin/renderer/ezdoc-wpcf7-editor-panel-renderer.php:113
 msgid "First Name Kana"
 msgstr ""
 
-#: admin/renderer/ezdoc-wpcf7-editor-panel-renderer.php:133
+#: admin/renderer/ezdoc-wpcf7-editor-panel-renderer.php:122
 msgid "Last Name"
 msgstr ""
 
-#: admin/renderer/ezdoc-wpcf7-editor-panel-renderer.php:142
+#: admin/renderer/ezdoc-wpcf7-editor-panel-renderer.php:131
 msgid "Last Name Kana"
 msgstr ""
 
-#: admin/renderer/ezdoc-wpcf7-editor-panel-renderer.php:151
+#: admin/renderer/ezdoc-wpcf7-editor-panel-renderer.php:140
 msgid "Email"
 msgstr ""
 
-#: admin/renderer/ezdoc-wpcf7-editor-panel-renderer.php:160
+#: admin/renderer/ezdoc-wpcf7-editor-panel-renderer.php:149
 msgid "Phone Number"
 msgstr ""
 
-#: admin/renderer/ezdoc-wpcf7-editor-panel-renderer.php:169
+#: admin/renderer/ezdoc-wpcf7-editor-panel-renderer.php:158
 msgid "Organization"
 msgstr ""
 
-#: admin/renderer/ezdoc-wpcf7-editor-panel-renderer.php:178
+#: admin/renderer/ezdoc-wpcf7-editor-panel-renderer.php:167
 msgid "Organization Title"
 msgstr ""
 
-#: admin/renderer/ezdoc-wpcf7-editor-panel-renderer.php:224
+#: admin/renderer/ezdoc-wpcf7-editor-panel-renderer.php:212
 msgid "EZ Doc API key is not configured."
 msgstr ""
 
-#: admin/renderer/ezdoc-wpcf7-editor-panel-renderer.php:227
+#: admin/renderer/ezdoc-wpcf7-editor-panel-renderer.php:214
 msgid "Please configure API key from (Settings -> General -> EZ Doc API key)"
+msgstr ""
+
+#: includes/ezdoc-client.php:99 includes/ezdoc-client.php:105
+msgid "Could not reach EZ Doc server. Please check your network settings."
+msgstr ""
+
+#: includes/ezdoc-client.php:116
+msgid "Unexpected error occurred. Please retry after a little while."
+msgstr ""
+
+#: includes/ezdoc-client.php:120
+msgid "Invalid input."
+msgstr ""
+
+#: includes/ezdoc-client.php:124
+msgid ""
+"Failed to authenticate to EZ Doc. Please make sure that correct API key is "
+"set."
+msgstr ""
+
+#: includes/ezdoc-client.php:127
+msgid ""
+"You don't have necessary permission to perform this action. Please make "
+"sure that correct API key is set."
+msgstr ""
+
+#: includes/ezdoc-client.php:131
+#, php-format
+msgid ""
+"Unexpected error occurred (status: %s). Please retry after a little while."
 msgstr ""

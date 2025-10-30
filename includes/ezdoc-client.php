@@ -95,12 +95,14 @@ class EZDocClient {
   private function get_body_object(array | \WP_Error $api_result) {
     if (\is_wp_error($api_result)) {
       \error_log(\print_r($api_result, true));
-      throw new EZDocException('EZDocサーバーにアクセスできませんでした。ネットワークの設定をご確認ください。');
+      // throw new EZDocException('EZDocサーバーにアクセスできませんでした。ネットワークの設定をご確認ください。');
+      throw new EZDocException(\__('Could not reach EZ Doc server. Please check your network settings.', 'ez-doc-integration-for-contact-form-7'));
     }
 
     $status_code = $api_result['response']['code'];
     if (!is_int($status_code)) {
-      throw new EZDocException('EZDocサーバーにアクセスできませんでした。ネットワークの設定をご確認ください。');
+      // throw new EZDocException('EZDocサーバーにアクセスできませんでした。ネットワークの設定をご確認ください。');
+      throw new EZDocException(\__('Could not reach EZ Doc server. Please check your network settings.', 'ez-doc-integration-for-contact-form-7'));
     }
     if (200 <= $status_code and $status_code < 300) {
       return \json_decode($api_result['body']);
@@ -110,17 +112,23 @@ class EZDocClient {
       case 400:
         $error_body = \json_decode($api_result['body']);
         if (\is_null($error_body)) {
-          throw new EZDocException('申し訳ございません、予期せぬエラーが発生しました。');
+          // throw new EZDocException('申し訳ございません、予期せぬエラーが発生しました。');
+          throw new EZDocException(\__('Unexpected error occurred. Please retry after a little while.', 'ez-doc-integration-for-contact-form-7'));
         } else {
           $error_message = \property_exists($error_body, 'message') ? $error_body->message : '';
-          throw new EZDocException('入力不備があります。' . $error_message);  
+          // throw new EZDocException('入力不備があります。' . $error_message);
+          throw new EZDocException(\__('Invalid input.', 'ez-doc-integration-for-contact-form-7'));
         }
       case 401:
-        throw new EZDocException('EZDocへの認証に失敗しました。EZDocのAPIキーに正しいものが設定されているか再度ご確認ください。');
+        // throw new EZDocException('EZDocへの認証に失敗しました。EZDocのAPIキーに正しいものが設定されているか再度ご確認ください。');
+        throw new EZDocException(\__('Failed to authenticate to EZ Doc. Please make sure that correct API key is set.', 'ez-doc-integration-for-contact-form-7'));
       case 403:
-        throw new EZDocException('EZDoc上でこの操作をする権限がありません。EZDocのAPIキーに正しいものが設定されているか再度ご確認ください。');
+        // throw new EZDocException('EZDoc上でこの操作をする権限がありません。EZDocのAPIキーに正しいものが設定されているか再度ご確認ください。');
+        throw new EZDocException(\__('You don\'t have necessary permission to perform this action. Please make sure that correct API key is set.', 'ez-doc-integration-for-contact-form-7'));
       default:
-        throw new EZDocException('申し訳ございません、予期せぬエラーが発生しました。（status: ' . $status_code . '）お時間をおいて再度お試しください。');
+        // throw new EZDocException('申し訳ございません、予期せぬエラーが発生しました。（status: ' . $status_code . '）お時間をおいて再度お試しください。');
+        /* translators: %s: status code */
+        throw new EZDocException(\__('Unexpected error occurred (status: %s). Please retry after a little while.', 'ez-doc-integration-for-contact-form-7'));
     }
   }
 
