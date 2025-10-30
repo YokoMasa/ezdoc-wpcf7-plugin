@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ez-doc-integration-for-contact-form-7\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2025-10-30 16:27+0900\n"
+"POT-Creation-Date: 2025-10-30 19:49+0900\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: Masato Yokota <masato.yokota@ez-doc.net>\n"
@@ -23,13 +23,28 @@ msgstr ""
 "X-Generator: Poedit 3.8\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: admin/ezdoc-wpcf7.php:19
+#: admin/ez-doc-integration-for-contact-form-7.php:19
+#: admin/ez-doc-integration-for-contact-form-7.php:28
 msgid "EZ Doc API key"
 msgstr "EZ Doc APIキー"
 
-#: admin/ezdoc-wpcf7.php:48
+#: admin/ez-doc-integration-for-contact-form-7.php:20
+msgid "API key necessary for integrating with EZ Doc."
+msgstr ""
+"EZDocとの連携に必要な認証キーです。EZDocの「外部システム連携」ページからご確"
+"認ください。"
+
+#: admin/ez-doc-integration-for-contact-form-7.php:48
 msgid "EZ Doc settings"
 msgstr "EZ Docの設定"
+
+#: admin/renderer/api-key-setting-field-renderer.php:11
+msgid "API key necessary for EZ Doc integration."
+msgstr "EZDocとの連携に必要な認証キーです。"
+
+#: admin/renderer/api-key-setting-field-renderer.php:14
+msgid "Please get the key in \"Integrate With External System\" page."
+msgstr "EZDocの「外部システム連携」ページからご確認ください。"
 
 #: admin/renderer/ezdoc-wpcf7-editor-panel-renderer.php:13
 msgid "EZ Doc Settings"
@@ -40,7 +55,8 @@ msgid ""
 "In this page, you can choose which EZ Doc document to be automatically sent "
 "to the form responder."
 msgstr ""
-"ここでは、フォームへの回答があった時にフォーム回答者に送付するEZDoc資料を設定することができます。"
+"ここでは、フォームへの回答があった時にフォーム回答者に送付するEZDoc資料を設"
+"定することができます。"
 
 #: admin/renderer/ezdoc-wpcf7-editor-panel-renderer.php:46
 msgid "EZ Doc document to be sent"
@@ -56,8 +72,9 @@ msgid ""
 "to EZ Doc. You need to include all the required form-tags into the form "
 "template. Otherwise, form data will not be sent to EZ Doc."
 msgstr ""
-"下記のフォームタグを設置することでその情報がEZDocに連携されます。"
-"必須に「●」がついているフォームタグは必ずフォームに含める必要があり、含めなかった場合EZDocに連携されなくなります。"
+"下記のフォームタグを設置することでその情報がEZDocに連携されます。必須に「●」"
+"がついているフォームタグは必ずフォームに含める必要があり、含めなかった場合"
+"EZDocに連携されなくなります。"
 
 #: admin/renderer/ezdoc-wpcf7-editor-panel-renderer.php:77
 msgid "Required"
@@ -118,6 +135,3 @@ msgstr "EZ DocのAPIキーが設定されていません。"
 #: admin/renderer/ezdoc-wpcf7-editor-panel-renderer.php:227
 msgid "Please configure API key from (Settings -> General -> EZ Doc API key)"
 msgstr "「設定 -> 一般 -> EZDoc APIキー」から設定を行ってください。"
-
-msgid "API key necessary for integrating with EZ Doc."
-msgstr "EZDocとの連携に必要な認証キーです。EZDocの「外部システム連携」ページからご確認ください。"

@@ -1,11 +1,12 @@
 # Blank WordPress Pot
 # Copyright 2014 ...
 # This file is distributed under the GNU General Public License v3 or later.
+#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: ez-doc-integration-for-contact-form-7\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2025-10-30 16:27+0900\n"
+"POT-Creation-Date: 2025-10-30 19:50+0900\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: Masato Yokota <masato.yokota@ez-doc.net>\n"
@@ -23,12 +24,25 @@ msgstr ""
 "X-Generator: Poedit 3.8\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: admin/ezdoc-wpcf7.php:19
+#: admin/ez-doc-integration-for-contact-form-7.php:19
+#: admin/ez-doc-integration-for-contact-form-7.php:28
 msgid "EZ Doc API key"
 msgstr ""
 
-#: admin/ezdoc-wpcf7.php:48
+#: admin/ez-doc-integration-for-contact-form-7.php:20
+msgid "API key necessary for integrating with EZ Doc."
+msgstr ""
+
+#: admin/ez-doc-integration-for-contact-form-7.php:48
 msgid "EZ Doc settings"
+msgstr ""
+
+#: admin/renderer/api-key-setting-field-renderer.php:11
+msgid "API key necessary for EZ Doc integration."
+msgstr ""
+
+#: admin/renderer/api-key-setting-field-renderer.php:14
+msgid "Please get the key in \"Integrate With External System\" page."
 msgstr ""
 
 #: admin/renderer/ezdoc-wpcf7-editor-panel-renderer.php:13
@@ -114,7 +128,4 @@ msgstr ""
 
 #: admin/renderer/ezdoc-wpcf7-editor-panel-renderer.php:227
 msgid "Please configure API key from (Settings -> General -> EZ Doc API key)"
-msgstr ""
-
-msgid "API key necessary for integrating with EZ Doc."
 msgstr ""

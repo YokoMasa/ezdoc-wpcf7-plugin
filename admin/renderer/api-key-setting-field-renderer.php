@@ -7,11 +7,10 @@ function render_api_key_setting_field() {
 	  <input type="text" name="ezdoc_wpcf7_api_key" value="<?php echo isset( $setting ) ? esc_attr( $setting ) : ''; ?>">
     <br/>
     <p>
-      EZDocとの連携に必要な認証キーです。EZDocの
+      <?php _e('API key necessary for EZ Doc integration.', 'ez-doc-integration-for-contact-form-7') ?>
       <a href="https://ez-doc.net/settings/integration" target="_blank">
-        「外部システム連携」ページ
+        <?php _e('Please get the key in "Integrate With External System" page.', 'ez-doc-integration-for-contact-form-7') ?>
       </a>
-      からご確認ください。
     </p>
   <?php
 }
