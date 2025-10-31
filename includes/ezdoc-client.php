@@ -95,12 +95,12 @@ class EZDocClient {
   private function get_body_object(array | \WP_Error $api_result) {
     if (\is_wp_error($api_result)) {
       \error_log(\print_r($api_result, true));
-      throw new EZDocException(\__('Could not reach EZ Doc server. Please check your network settings.', 'ez-doc-integration-for-contact-form-7'));
+      throw new EZDocException(\esc_html__('Could not reach EZ Doc server. Please check your network settings.', 'ez-doc-integration-for-contact-form-7'));
     }
 
     $status_code = $api_result['response']['code'];
     if (!is_int($status_code)) {
-      throw new EZDocException(\__('Could not reach EZ Doc server. Please check your network settings.', 'ez-doc-integration-for-contact-form-7'));
+      throw new EZDocException(\esc_html__('Could not reach EZ Doc server. Please check your network settings.', 'ez-doc-integration-for-contact-form-7'));
     }
     if (200 <= $status_code and $status_code < 300) {
       return \json_decode($api_result['body']);
@@ -110,18 +110,18 @@ class EZDocClient {
       case 400:
         $error_body = \json_decode($api_result['body']);
         if (\is_null($error_body)) {
-          throw new EZDocException(\__('Unexpected error occurred. Please retry after a little while.', 'ez-doc-integration-for-contact-form-7'));
+          throw new EZDocException(\esc_html__('Unexpected error occurred. Please retry after a little while.', 'ez-doc-integration-for-contact-form-7'));
         } else {
           $error_message = \property_exists($error_body, 'message') ? $error_body->message : '';
-          throw new EZDocException(\__('Invalid input.', 'ez-doc-integration-for-contact-form-7'));
+          throw new EZDocException(\esc_html__('Invalid input.', 'ez-doc-integration-for-contact-form-7'));
         }
       case 401:
-        throw new EZDocException(\__('Failed to authenticate to EZ Doc. Please make sure that correct API key is set.', 'ez-doc-integration-for-contact-form-7'));
+        throw new EZDocException(\esc_html__('Failed to authenticate to EZ Doc. Please make sure that correct API key is set.', 'ez-doc-integration-for-contact-form-7'));
       case 403:
-        throw new EZDocException(\__('You don\'t have necessary permission to perform this action. Please make sure that correct API key is set.', 'ez-doc-integration-for-contact-form-7'));
+        throw new EZDocException(\esc_html__('You don\'t have necessary permission to perform this action. Please make sure that correct API key is set.', 'ez-doc-integration-for-contact-form-7'));
       default:
         /* translators: %s: status code */
-        throw new EZDocException(\__('Unexpected error occurred (status: %s). Please retry after a little while.', 'ez-doc-integration-for-contact-form-7'));
+        throw new EZDocException(\esc_html__('Unexpected error occurred (status: %s). Please retry after a little while.', 'ez-doc-integration-for-contact-form-7'));
     }
   }
 

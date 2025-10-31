@@ -9,10 +9,10 @@ function render_wpcf7_editor_panel($form) {
   $ezdoc_api_key = \get_option(\EZDOC_WPCF7_OPTION_API_KEY);
   ?>
   <h2>
-    <?php _e('EZ Doc Settings', 'ez-doc-integration-for-contact-form-7') ?>
+    <?php esc_html_e('EZ Doc Settings', 'ez-doc-integration-for-contact-form-7') ?>
   </h2>
   <p style="margin-bottom: 16px;">
-    <?php _e('In this page, you can choose which EZ Doc document to be automatically sent to the form responder.', 'ez-doc-integration-for-contact-form-7') ?>
+    <?php esc_html_e('In this page, you can choose which EZ Doc document to be automatically sent to the form responder.', 'ez-doc-integration-for-contact-form-7') ?>
   </p>
   <?php
 
@@ -40,14 +40,14 @@ function _render_content($form, $ezdoc_documents, $ezdoc_viewer_attributes) {
 
   <div>
     <label for="ezdoc-document-id">
-      <?php _e('EZ Doc document to be sent', 'ez-doc-integration-for-contact-form-7') ?>
+      <?php esc_html_e('EZ Doc document to be sent', 'ez-doc-integration-for-contact-form-7') ?>
     </label>
     <br/>
     <select id="ezdoc-document-id" name="ezdoc-document-id">
       <option
         value=""
         <?php $ezdoc_document_id == '' ? 'selected' : '' ?>>
-        <?php _e('None selected', 'ez-doc-integration-for-contact-form-7') ?>
+        <?php esc_html_e('None selected', 'ez-doc-integration-for-contact-form-7') ?>
       </option>
       <?php foreach($ezdoc_documents as $doc): ?>
         <option
@@ -60,18 +60,18 @@ function _render_content($form, $ezdoc_documents, $ezdoc_viewer_attributes) {
   </div>
 
   <p style="margin-top: 16px; margin-bottom: 0;">
-    <?php _e('By including form-tags below into the form template, the data will be sent to EZ Doc. You need to include all the required form-tags into the form template. Otherwise, form data will not be sent to EZ Doc.', 'ez-doc-integration-for-contact-form-7') ?>
+    <?php esc_html_e('By including form-tags below into the form template, the data will be sent to EZ Doc. You need to include all the required form-tags into the form template. Otherwise, form data will not be sent to EZ Doc.', 'ez-doc-integration-for-contact-form-7') ?>
   </p>
   <table class="ezdoc-wpcf7-form-tag-table">
     <tr>      
       <th>
-        <?php _e('Required', 'ez-doc-integration-for-contact-form-7') ?>
+        <?php esc_html_e('Required', 'ez-doc-integration-for-contact-form-7') ?>
       </th>
       <th>
-        <?php _e('Is tag included in the form template?', 'ez-doc-integration-for-contact-form-7') ?>
+        <?php esc_html_e('Is tag included in the form template?', 'ez-doc-integration-for-contact-form-7') ?>
       </th>
       <th>
-        <?php _e('Form-tag example', 'ez-doc-integration-for-contact-form-7') ?>
+        <?php esc_html_e('Form-tag example', 'ez-doc-integration-for-contact-form-7') ?>
       </th>
     </tr>
     <?php foreach($ezdoc_viewer_attributes as $attr): ?>
@@ -94,14 +94,14 @@ function _render_viewer_attribute_row($attr, $form_tags) {
     )
   );
   $has_form_tag_text = $has_form_tag
-    ? '<span style="color: green; font-weight: 700;">' . __('Included', 'ez-doc-integration-for-contact-form-7') . '</span>'
-    : '<span style="color: red; font-weight: 700;">' . __('Not Included', 'ez-doc-integration-for-contact-form-7') . '</span>';
+    ? '<span style="color: green; font-weight: 700;">' . esc_html__('Included', 'ez-doc-integration-for-contact-form-7') . '</span>'
+    : '<span style="color: red; font-weight: 700;">' . esc_html__('Not Included', 'ez-doc-integration-for-contact-form-7') . '</span>';
   switch($attr_id) {
     case 'firstName':?>
       <td>●</td>
       <td><?php echo $has_form_tag_text ?></td>
       <td>
-        &lt;label&gt;<?php _e('First Name', 'ez-doc-integration-for-contact-form-7') ?>
+        &lt;label&gt;<?php esc_html_e('First Name', 'ez-doc-integration-for-contact-form-7') ?>
         <br/>&nbsp;&nbsp;[text* firstName autocomplete:given-name]&lt;/label&gt;
       </td>
       <?php
@@ -110,7 +110,7 @@ function _render_viewer_attribute_row($attr, $form_tags) {
       <td></td>
       <td><?php echo $has_form_tag_text ?></td>
       <td>
-        &lt;label&gt;<?php _e('First Name Kana', 'ez-doc-integration-for-contact-form-7') ?>
+        &lt;label&gt;<?php esc_html_e('First Name Kana', 'ez-doc-integration-for-contact-form-7') ?>
         <br/>&nbsp;&nbsp;[text firstNameKana]&lt;/label&gt;
       </td>
       <?php
@@ -119,7 +119,7 @@ function _render_viewer_attribute_row($attr, $form_tags) {
       <td>●</td>
       <td><?php echo $has_form_tag_text ?></td>
       <td>
-        &lt;label&gt;<?php _e('Last Name', 'ez-doc-integration-for-contact-form-7') ?>
+        &lt;label&gt;<?php esc_html_e('Last Name', 'ez-doc-integration-for-contact-form-7') ?>
         <br/>&nbsp;&nbsp;[text* lastName autocomplete:family-name]&lt;/label&gt;
       </td>
       <?php
@@ -128,7 +128,7 @@ function _render_viewer_attribute_row($attr, $form_tags) {
       <td></td>
       <td><?php echo $has_form_tag_text ?></td>
       <td>
-        &lt;label&gt;<?php _e('Last Name Kana', 'ez-doc-integration-for-contact-form-7') ?>
+        &lt;label&gt;<?php esc_html_e('Last Name Kana', 'ez-doc-integration-for-contact-form-7') ?>
         <br/>&nbsp;&nbsp;[text lastNameKana]&lt;/label&gt;
       </td>
       <?php
@@ -137,7 +137,7 @@ function _render_viewer_attribute_row($attr, $form_tags) {
       <td>●</td>
       <td><?php echo $has_form_tag_text ?></td>
       <td>
-        &lt;label&gt;<?php _e('Email', 'ez-doc-integration-for-contact-form-7') ?>
+        &lt;label&gt;<?php esc_html_e('Email', 'ez-doc-integration-for-contact-form-7') ?>
         <br/>&nbsp;&nbsp;[email* email autocomplete:email]&lt;/label&gt;
       </td>
       <?php
@@ -146,7 +146,7 @@ function _render_viewer_attribute_row($attr, $form_tags) {
       <td></td>
       <td><?php echo $has_form_tag_text ?></td>
       <td>
-        &lt;label&gt;<?php _e('Phone Number', 'ez-doc-integration-for-contact-form-7') ?>
+        &lt;label&gt;<?php esc_html_e('Phone Number', 'ez-doc-integration-for-contact-form-7') ?>
         <br/>&nbsp;&nbsp;[tel phoneNumber autocomplete:tel]&lt;/label&gt;
       </td>
       <?php
@@ -155,7 +155,7 @@ function _render_viewer_attribute_row($attr, $form_tags) {
       <td></td>
       <td><?php echo $has_form_tag_text ?></td>
       <td>
-        &lt;label&gt;<?php _e('Organization', 'ez-doc-integration-for-contact-form-7') ?>
+        &lt;label&gt;<?php esc_html_e('Organization', 'ez-doc-integration-for-contact-form-7') ?>
         <br/>&nbsp;&nbsp;[text companyName autocomplete:organization]&lt;/label&gt;
       </td>
       <?php
@@ -164,7 +164,7 @@ function _render_viewer_attribute_row($attr, $form_tags) {
       <td></td>
       <td><?php echo $has_form_tag_text ?></td>
       <td>
-        &lt;label&gt;<?php _e('Organization Title', 'ez-doc-integration-for-contact-form-7') ?>
+        &lt;label&gt;<?php esc_html_e('Organization Title', 'ez-doc-integration-for-contact-form-7') ?>
         <br/>&nbsp;&nbsp;[text departmentName autocomplete:organization-title]&lt;/label&gt;
       </td>
       <?php
@@ -203,15 +203,15 @@ function _render_viewer_custom_attribute_row($attr, $has_form_tag_text) {?>
   }
   $form_tag .= ']';
   echo '<br/>&nbsp;&nbsp;';
-  echo $form_tag;?>&lt;/label&gt;
+  echo esc_html($form_tag);?>&lt;/label&gt;
   <?php
 }
 
 function _render_no_api_key_content() {?>
   <div style="background-color: #fff085; padding: 8px; border-radius: 4px;">
-    <?php _e('EZ Doc API key is not configured.', 'ez-doc-integration-for-contact-form-7') ?>
+    <?php esc_html_e('EZ Doc API key is not configured.', 'ez-doc-integration-for-contact-form-7') ?>
     <a href="<?php echo esc_url(admin_url('options-general.php')) ?>">
-      <?php _e('Please configure API key from (Settings -> General -> EZ Doc API key)', 'ez-doc-integration-for-contact-form-7') ?>
+      <?php esc_html_e('Please configure API key from (Settings -> General -> EZ Doc API key)', 'ez-doc-integration-for-contact-form-7') ?>
     </a>
   </div>
 <?php

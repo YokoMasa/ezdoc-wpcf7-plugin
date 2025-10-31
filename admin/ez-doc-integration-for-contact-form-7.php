@@ -16,8 +16,8 @@ function on_admin_init() {
     EZDOC_WPCF7_OPTION_API_KEY,
     array(
       'type' => 'string',
-      'label' => \__('EZ Doc API key', 'ez-doc-integration-for-contact-form-7'),
-      'description' => \__('API key necessary for integrating with EZ Doc.', 'ez-doc-integration-for-contact-form-7'),
+      'label' => \esc_html__('EZ Doc API key', 'ez-doc-integration-for-contact-form-7'),
+      'description' => \esc_html__('API key necessary for integrating with EZ Doc.', 'ez-doc-integration-for-contact-form-7'),
       'show_in_rest' => false,
       'sanitize_callback' => 'sanitize_text_field'
     )
@@ -25,7 +25,7 @@ function on_admin_init() {
 
   \add_settings_field(
     EZDOC_WPCF7_OPTION_API_KEY,
-    \__('EZ Doc API key', 'ez-doc-integration-for-contact-form-7'),
+    \esc_html__('EZ Doc API key', 'ez-doc-integration-for-contact-form-7'),
     'EZDocWpcf7\renderer\render_api_key_setting_field',
     'general'
   );
@@ -45,7 +45,7 @@ function on_admin_enqueue_scripts() {
  */
 function on_wpcf7_editor_panels($panels) {
   $panels['ezdoc'] = array(
-    'title' => \__('EZ Doc settings', 'ez-doc-integration-for-contact-form-7'),
+    'title' => \esc_html__('EZ Doc settings', 'ez-doc-integration-for-contact-form-7'),
 		'callback' => 'EZDocWpcf7\renderer\render_wpcf7_editor_panel',
   );
   return $panels;
